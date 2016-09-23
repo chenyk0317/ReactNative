@@ -26,7 +26,7 @@ class CustomButton extends React.Component {
   render(){
     return(
       <TouchableOpacity onPress = {this.props.onPress}>
-              <Text style = {this.props.style}>{this.props.text}</Text>
+          <Text style = {this.props.style}>{this.props.text}</Text>
     </TouchableOpacity>
     );
   }
