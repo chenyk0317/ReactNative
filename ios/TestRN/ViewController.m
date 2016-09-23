@@ -21,20 +21,20 @@
 - (IBAction)action:(id)sender {
     
     NSURL *jsCodeLocation = [NSURL
-                             URLWithString:@"http://10.253.11.117:8081/index.ios.bundle?platform=ios"];
+                             URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
     RCTRootView *rootView =
     [[RCTRootView alloc] initWithBundleURL : jsCodeLocation
                          moduleName        : @"TestRN"
                          initialProperties :nil launchOptions: nil];
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view = rootView;
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
 
 }
 
