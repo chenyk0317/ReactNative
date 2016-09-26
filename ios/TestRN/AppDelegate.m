@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import <React/RCTRootView.h>
+#import "RCTBundleURLProvider.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSURL *jsCodeLocation;
+    
+//    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+    //jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+    jsCodeLocation = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"demo.txt" ofType:nil]];
+    
+    
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                        moduleName:@"TestRN"
+                                                 initialProperties:nil
+                                                     launchOptions:launchOptions];
+    rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UIViewController *rootViewController = [UIViewController new];
+    rootViewController.view = rootView;
+    self.window.rootViewController = rootViewController;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

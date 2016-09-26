@@ -11,11 +11,11 @@ import {
     Image,
 } from 'react-native';
 import ListData from './data.js';
-
-class TestRN extends React.Component {
+import DetailView from './DetailView.js';
+import Style from './StyleCss.js';
+export default class MyListView extends React.Component{
   constructor(props) {
         super(props);
-
         this.state = {
           dataSource:new ListView.DataSource({
             rowHasChanged: (r1, r2) => r1 !== r2
@@ -25,10 +25,17 @@ class TestRN extends React.Component {
     }
     render() {
         return (
-          <ListView
-              dataSource={this.state.dataSource}
-              renderRow={this._renderRow.bind(this)}
-          />
+          <View style={Style.container}>
+            <View style={Style.headView}>
+              <Text style={Style.title}>RN学习</Text>
+            </View>
+
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={this._renderRow.bind(this)}
+            />
+          </View>
+
       );
     }
 
@@ -36,13 +43,13 @@ class TestRN extends React.Component {
     _renderRow(rowData,sectionid,rowid){
       return (
         <TouchableOpacity onPress={() => this.onClick(rowData,sectionid,rowid)}>
-          <View style={styles.container}>
+          <View style={Style.itemContainer}>
             <Image
               source={{uri: rowData.pic}}
-              style={styles.thumbnail}
+              style={Style.itemThumbnail}
               />
-            <View style={styles.rightContainer}>
-              <Text style={styles.title}>{rowData.introduce}</Text>
+            <View style={Style.itemRightContainer}>
+              <Text style={Style.itemTitle}>{rowData.introduce}</Text>
             </View>
           </View>
 
@@ -51,8 +58,19 @@ class TestRN extends React.Component {
               );
   }
     onClick(rowData,sectionId,rowId){
-      console.log(rowData);
-      alert('productId:'+rowData.productId);
+      //console.log(rowData);
+      //alert('productId:'+rowData.productId);
+      const { navigator } = this.props;
+      if(navigator) {
+        navigator.push({
+        name: 'DetailView',
+        component: DetailView,
+        params: {
+            data:rowData,
+            title:'详情页'
+        }
+    });
+}
     }
     componentWillMount(){
 
@@ -77,34 +95,4 @@ class TestRN extends React.Component {
 
 
 }
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  rightContainer: {
-    flex: 1,
-  },
-  title: {
-    fontSize: 20,
-    marginBottom: 8,
-    textAlign: 'center',
-  },
-  year: {
-    textAlign: 'center',
-  },
-  thumbnail: {
-    width: 53,
-    height: 81,
-  },
-  listView: {
-    paddingTop: 20,
-    backgroundColor: '#F5FCFF',
-  },
-});
-
-// Module name
-AppRegistry.registerComponent('TestRN', () => TestRN);
+module.exports = MyListView;
