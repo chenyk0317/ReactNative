@@ -1,9 +1,10 @@
 platform :ios, '7.0'
 target 'TestRN' do
   pod 'React', :path => '../node_modules/react-native', :subspecs => [
-    'Core',
-    'RCTText',
-    'RCTWebSocket', # needed for debugging
-    # Add any other subspecs you want to use in your project
+  'Core',
+  'RCTImage',
+  'RCTNetwork',
+  'RCTText',
+  'RCTWebSocket'
   ]
 end

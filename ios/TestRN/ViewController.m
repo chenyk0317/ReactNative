@@ -20,8 +20,10 @@
 }
 - (IBAction)action:(id)sender {
     
-    NSURL *jsCodeLocation = [NSURL
-                             URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+    NSURL *jsCodeLocation;
+    jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+    //jsCodeLocation = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"listview.txt" ofType:nil]];
+    
     RCTRootView *rootView =
     [[RCTRootView alloc] initWithBundleURL : jsCodeLocation
                          moduleName        : @"TestRN"
