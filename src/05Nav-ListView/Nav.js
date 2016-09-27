@@ -17,8 +17,10 @@ const backImage  ='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAcCAYAAAB
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
-  }
 
+  }
+  componentWillMount(){
+  }
   back() {
     const { navigator } = this.props;
     if(navigator) {
@@ -27,11 +29,16 @@ export default class Navigation extends Component {
   }
 
   render() {
+    let btn = this.props.hiddenBack === '1' ?
+     <View style={styles.image}/>
+    :(
+      <TouchableOpacity onPress={this.back.bind(this)}>
+        <Image source={{uri:backImage}} style={styles.image}/>
+      </TouchableOpacity>);
+
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={this.back.bind(this)}>
-          <Image source={{uri:backImage}} style={styles.image}/>
-        </TouchableOpacity>
+          {btn}
         <Text style={styles.title}>{this.props.title}</Text>
         <TouchableOpacity>
           <View><Text style={styles.button}>{this.props.button}</Text></View>
