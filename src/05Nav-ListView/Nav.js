@@ -28,21 +28,37 @@ export default class Navigation extends Component {
     }
   }
 
+  onPressBack() {
+    if (this.props.back) {
+      this.props.back();
+    }else {
+      this.back();
+    }
+  }
   render() {
     let btn = this.props.hiddenBack === '1' ?
-     <View style={styles.image}/>
+     <View />
     :(
-      <TouchableOpacity onPress={this.back.bind(this)}>
+      <TouchableOpacity onPress={this.onPressBack.bind(this)}>
         <Image source={{uri:backImage}} style={styles.image}/>
       </TouchableOpacity>);
 
     return (
       <View style={styles.container}>
+        <View style={styles.leftView}>
           {btn}
+        </View>
+
         <Text style={styles.title}>{this.props.title}</Text>
-        <TouchableOpacity>
-          <View><Text style={styles.button}>{this.props.button}</Text></View>
-        </TouchableOpacity>
+
+        <View  style={styles.rightView}>
+          <TouchableOpacity>
+            <View><Text style={styles.button}>{this.props.button}</Text></View>
+          </TouchableOpacity>
+        </View>
+
+
+
       </View>
     );
   }
@@ -56,6 +72,14 @@ const styles = StyleSheet.create({
     height: 64,
     paddingTop:20,
     alignItems:'center',
+  },
+  leftView:{
+      marginLeft:0,
+      width:50,
+  },
+  rightView:{
+      marginRight:0,
+      width:50,
   },
   image: {
     marginLeft:20,
