@@ -55,7 +55,7 @@ export default class MyListView extends React.Component{
             {/* <View style={Style.headView}>
               <Text style={Style.title}>RN学习</Text>
             </View> */}
-            <Nav  hiddenBack='1' title='测试'/>
+            <Nav {...this.props}/>
             <Tab tabs={tabs} height={tabBarHeight} backgroundColor='#ffffff' callback={this._tabCallback.bind(this)}/>
             {contentView}
           </View>

@@ -8,7 +8,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-import HomePage from './ListView.js';
+import HomePage from './HomePage.js';
 
 const NoBackSwipe = {
   ...Navigator.SceneConfigs.PushFromRight,

@@ -503,7 +503,7 @@
 				INFOPLIST_FILE = TestRN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daojia.hehuorentest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daojia.hehuorentest0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e853cdc1-aa2a-4e71-9e96-f29d3dd09bb0";
 			};
@@ -518,7 +518,7 @@
 				INFOPLIST_FILE = TestRN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daojia.hehuorentest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daojia.hehuorentest0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e853cdc1-aa2a-4e71-9e96-f29d3dd09bb0";
 			};
