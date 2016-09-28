@@ -28,6 +28,29 @@ var IMAGES = [
   'http://imgstore.cdn.sogou.com/app/a/100540002/527471.jpg',
 ];
 
+var Card = React.createClass({
+  showToast(i) {
+    alert(i);
+  },
+
+  render() {
+    return (
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => this.showToast(this.props.list)}>
+        <View style={styles.blank}/>
+        <Image
+          style={styles.image}
+          resizeMode={'cover'}
+          source={{uri: this.props.img}}/>
+        <View style={styles.blank}/>
+      </TouchableOpacity>
+    );
+  }
+});
+
+var createCardRow = (img, i) => <Card key={i} img={img} num={i} list = {IMAGES}/>;
+
 export default class Scroll extends React.Component{
   constructor(props) {
         super(props);
@@ -36,21 +59,15 @@ export default class Scroll extends React.Component{
     }
     render() {
       var verticalScrollView = (
-        <ScrollImageView list={IMAGES} ></ScrollImageView>
-
+        <ScrollView /*horizontal={true}*/
+          style={styles.container}>
+          {IMAGES.map(createCardRow)}
+        </ScrollView>
       );
       return (
         <View  style= {Style.container}>
           <Nav  {...this.props}/>
-          <View style={styles.container}>
             {verticalScrollView}
-          </View>
-          <View style={styles.container}>
-            {verticalScrollView}
-          </View>
-          <View style={styles.container}>
-            {verticalScrollView}
-          </View>
         </View>
       );
     }
@@ -60,9 +77,25 @@ export default class Scroll extends React.Component{
 var styles = StyleSheet.create({
 
   container: {
-    // flex: 1,
-    height: 90,
-    backgroundColor:'#ffffff',
-    // flexDirection: 'row',
+    flex: 1,
   },
+
+  button: {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    margin: 10,
+  },
+
+  image: {
+    flex: 1,
+    height: 200,
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: '#FF1492',
+  },
+
+  blank: {
+    width: 10,
+  }
 });
