@@ -9,6 +9,13 @@ import {
 } from 'react-native';
 
 import HomePage from './ListView.js';
+
+const NoBackSwipe = {
+  ...Navigator.SceneConfigs.PushFromRight,
+    gestures: {
+      pop: {}
+    }
+};
 class TestRN extends React.Component {
   render() {
             let defaultName = 'HomePage';
@@ -17,7 +24,8 @@ class TestRN extends React.Component {
             <Navigator
               initialRoute={{ name: defaultName, component: defaultComponent }}
               configureScene={(route) => {
-                return Navigator.SceneConfigs.PushFromRight;
+                // return Navigator.SceneConfigs.PushFromRight;
+                return NoBackSwipe;
               }}
               renderScene={(route, navigator) => {
                 let Component = route.component;

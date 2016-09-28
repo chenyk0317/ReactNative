@@ -108,10 +108,17 @@ export default class MyListView extends React.Component{
         component: DetailView,
         params: {
             data:rowData,
-            title:'详情页'
+            title:'详情页',
+            callback:function(str){
+              alert(str);
+            },
         }
     });
-}
+    }
+    }
+
+    testCallBack(p){
+      alert(p);
     }
     componentWillMount(){
 
@@ -136,8 +143,10 @@ export default class MyListView extends React.Component{
             productList = ListData.datas;
             setTimeout(
               () => this.setState({loaded: true}),
-              500
+              300
             );
+
+            // this.setState({loaded: true});
         }
 
     }
