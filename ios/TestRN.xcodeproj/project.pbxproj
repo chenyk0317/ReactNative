@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		99764757951003DEBBAB6E75 /* libPods-TestRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0B7C156EC1FB7BCA9809AA /* libPods-TestRN.a */; };
+		E160D87B1D9D3582004BE273 /* demo.txt in Resources */ = {isa = PBXBuildFile; fileRef = E160D87A1D9D3582004BE273 /* demo.txt */; };
 		E186447F1D4F742A0092D2A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E186447E1D4F742A0092D2A6 /* main.m */; };
 		E18644821D4F742A0092D2A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E18644811D4F742A0092D2A6 /* AppDelegate.m */; };
 		E18644851D4F742A0092D2A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18644841D4F742A0092D2A6 /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		E186448D1D4F742A0092D2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E186448B1D4F742A0092D2A6 /* LaunchScreen.storyboard */; };
 		E18644981D4F742A0092D2A6 /* TestRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E18644971D4F742A0092D2A6 /* TestRNTests.m */; };
 		E18644A31D4F742A0092D2A6 /* TestRNUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E18644A21D4F742A0092D2A6 /* TestRNUITests.m */; };
-		E19C886A1D9BCBB700C384FB /* demo.txt in Resources */ = {isa = PBXBuildFile; fileRef = E19C88691D9BCBB700C384FB /* demo.txt */; };
 		E1FC6D601D98CB6D0002A575 /* listview.txt in Resources */ = {isa = PBXBuildFile; fileRef = E1FC6D5F1D98CB6D0002A575 /* listview.txt */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		52F006EE582CA3CDC72F5C03 /* Pods-TestRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestRN/Pods-TestRN.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0B7C156EC1FB7BCA9809AA /* libPods-TestRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E160D87A1D9D3582004BE273 /* demo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.txt; sourceTree = "<group>"; };
 		E186447A1D4F74290092D2A6 /* TestRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E186447E1D4F742A0092D2A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E18644801D4F742A0092D2A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		E186449E1D4F742A0092D2A6 /* TestRNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestRNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18644A21D4F742A0092D2A6 /* TestRNUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRNUITests.m; sourceTree = "<group>"; };
 		E18644A41D4F742A0092D2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E19C88691D9BCBB700C384FB /* demo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.txt; sourceTree = "<group>"; };
 		E1FC6D5F1D98CB6D0002A575 /* listview.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = listview.txt; sourceTree = "<group>"; };
 		F153609B587F4B805915B401 /* Pods-TestRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestRN/Pods-TestRN.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,7 +129,7 @@
 		E186447C1D4F742A0092D2A6 /* TestRN */ = {
 			isa = PBXGroup;
 			children = (
-				E19C88691D9BCBB700C384FB /* demo.txt */,
+				E160D87A1D9D3582004BE273 /* demo.txt */,
 				E1FC6D5F1D98CB6D0002A575 /* listview.txt */,
 				E18644801D4F742A0092D2A6 /* AppDelegate.h */,
 				E18644811D4F742A0092D2A6 /* AppDelegate.m */,
@@ -240,6 +240,7 @@
 				TargetAttributes = {
 					E18644791D4F74290092D2A6 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UMVJA3Q4S6;
 					};
 					E18644921D4F742A0092D2A6 = {
 						CreatedOnToolsVersion = 7.3;
@@ -280,7 +281,7 @@
 				E1FC6D601D98CB6D0002A575 /* listview.txt in Resources */,
 				E186448A1D4F742A0092D2A6 /* Assets.xcassets in Resources */,
 				E18644881D4F742A0092D2A6 /* Main.storyboard in Resources */,
-				E19C886A1D9BCBB700C384FB /* demo.txt in Resources */,
+				E160D87B1D9D3582004BE273 /* demo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,11 +500,12 @@
 			baseConfigurationReference = 52F006EE582CA3CDC72F5C03 /* Pods-TestRN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = TestRN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daojia.hehuorentest0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daojia.hehuorentest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e853cdc1-aa2a-4e71-9e96-f29d3dd09bb0";
 			};
@@ -514,11 +516,12 @@
 			baseConfigurationReference = F153609B587F4B805915B401 /* Pods-TestRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = TestRN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daojia.hehuorentest0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daojia.hehuorentest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e853cdc1-aa2a-4e71-9e96-f29d3dd09bb0";
 			};

@@ -16,7 +16,8 @@ import Scroll from './Scrollview.js';
 import ListView1 from './ListView.js';
 import ListView2 from './ListView2.js';
 import CallbackView from './CallBackView.js';
-
+import NetView from './NetView.js';
+import WeatherView from './WeatherView.js';
 export default class DetailView extends React.Component{
   constructor(props) {
         super(props);
@@ -66,9 +67,9 @@ export default class DetailView extends React.Component{
 
 
             <View style={styles.blank}/>
-            <TouchableOpacity  onPress={() => this.onClick(1)}>
+            <TouchableOpacity  onPress={() => this.onClick(5)}>
             <View style={styles.row}>
-              <Text style={styles.text} >ScrollView使用</Text>
+              <Text style={styles.text} >网络请求</Text>
             </View>
             </TouchableOpacity>
 
@@ -76,9 +77,9 @@ export default class DetailView extends React.Component{
 
 
             <View style={styles.blank}/>
-            <TouchableOpacity  onPress={() => this.onClick(1)}>
+            <TouchableOpacity  onPress={() => this.onClick(6)}>
             <View style={styles.row}>
-              <Text style={styles.text} >ScrollView使用</Text>
+              <Text style={styles.text} >天气小demo</Text>
             </View>
             </TouchableOpacity>
 
@@ -136,6 +137,26 @@ export default class DetailView extends React.Component{
               },
             }
           });
+        }
+
+
+        if (5 == i) {
+          navigator.push({
+          name: 'NetView',
+          component: NetView,
+          params: {
+              title:'网络请求',
+          }});
+
+        }
+        if (6 == i) {
+          navigator.push({
+          name: 'WeatherView',
+          component: WeatherView,
+          params: {
+              title:'WeatherView',
+          }});
+
         }
 
   }
