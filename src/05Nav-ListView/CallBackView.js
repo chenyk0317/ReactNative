@@ -13,8 +13,6 @@ import {
 } from 'react-native';
 import Style from './StyleCss.js';
 import Nav from './Nav.js';
-import Scroll from './Scrollview.js';
-import ListView2 from './ListView2.js';
 
 export default class DetailView extends React.Component{
   constructor(props) {
