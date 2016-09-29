@@ -99,6 +99,7 @@ export default class MyListView extends React.Component{
 
 
     onClick(rowData,sectionId,rowId){
+
       //console.log(rowData);
       //alert('productId:'+rowData.productId);
       const { navigator } = this.props;
