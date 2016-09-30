@@ -167,20 +167,21 @@ const styles = StyleSheet.create({
         marginRight:0,
         //marginTop:30/ratio,
         //alignSelf:'center',
+        justifyContent:'space-between'
     },
+    statusContainer:{
+      flex:1,
+      marginBottom:0,
+      height:30,
+      // backgroundColor:'#8DEEEE',
+    },
+
     spaceRowContainer:{
         flex:1,
         backgroundColor: '#f2f2f2',
         height:15,
     },
-    statusContainer:{
-      flex:1,
-      position:'absolute',
-      height:30,
-      bottom:0,
-      right:0,
-      left:0,
-    },
+
     cuttingline:{
       height:1,
       backgroundColor: '#f2f2f2',
@@ -195,8 +196,12 @@ const styles = StyleSheet.create({
       height:20,
     },
     productContainer:{
+      height:248/2-30,
       flex:1,
       flexDirection:'row',
+      // backgroundColor:'#9400D3',
+      justifyContent:'flex-start'
+
     },
     productImage:{
         marginTop:30/2,
@@ -205,11 +210,12 @@ const styles = StyleSheet.create({
         width:70,
     },
     productText:{
-        marginTop:30/2,
-        marginRight:30/2,
+        marginTop:15,
+        paddingLeft:8,
+        paddingRight:8,
         fontSize:28/2,
-        color:'#333333',
-        width:250,
+        // color:'#333333',
+        width:(width)-70-15-8,
     },
 
     datetimeText:{
