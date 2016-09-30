@@ -19,7 +19,6 @@ import CallbackView from './CallBackView.js';
 import NetView from './NetView.js';
 import WeatherView from './WeatherView.js';
 import LayoutView from './LayoutView.js';
-
 export default class DetailView extends React.Component{
   constructor(props) {
         super(props);
@@ -92,6 +91,7 @@ export default class DetailView extends React.Component{
               <Text style={styles.text} >Layout 进阶</Text>
             </View>
             </TouchableOpacity>
+
 
 
           </View>
@@ -175,7 +175,6 @@ export default class DetailView extends React.Component{
           params: {
               title:'Layout 进阶',
           }});
-
         }
 
 

@@ -24,6 +24,7 @@
 //    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
     jsCodeLocation = [NSURL URLWithString:@"http://10.253.8.194:8081/index.ios.bundle?platform=ios"];
     //jsCodeLocation = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"demo.txt" ofType:nil]];
+
     
     
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation

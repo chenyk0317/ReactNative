@@ -182,6 +182,7 @@ const styles = StyleSheet.create({
         height:15,
     },
 
+
     cuttingline:{
       height:1,
       backgroundColor: '#f2f2f2',
@@ -201,7 +202,6 @@ const styles = StyleSheet.create({
       flexDirection:'row',
       // backgroundColor:'#9400D3',
       justifyContent:'flex-start'
-
     },
     productImage:{
         marginTop:30/2,
