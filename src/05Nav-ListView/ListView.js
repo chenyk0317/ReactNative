@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
       flex:1,
       marginBottom:0,
       height:30,
-      // backgroundColor:'#8DEEEE',
+      backgroundColor:'#8DEEEE',
     },
 
     spaceRowContainer:{
@@ -181,7 +181,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2',
         height:15,
     },
-
 
     cuttingline:{
       height:1,
@@ -200,8 +199,9 @@ const styles = StyleSheet.create({
       height:248/2-30,
       flex:1,
       flexDirection:'row',
-      // backgroundColor:'#9400D3',
+      backgroundColor:'#9400D3',
       justifyContent:'flex-start'
+
     },
     productImage:{
         marginTop:30/2,
@@ -214,8 +214,8 @@ const styles = StyleSheet.create({
         paddingLeft:8,
         paddingRight:8,
         fontSize:28/2,
-        // color:'#333333',
-        width:(width)-70-15-8,
+        color:'#333333',
+        width:(width),
     },
 
     datetimeText:{

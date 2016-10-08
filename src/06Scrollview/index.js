@@ -80,6 +80,7 @@ var styles = StyleSheet.create({
 
   blank: {
     width: 10,
+    
   }
 });
 

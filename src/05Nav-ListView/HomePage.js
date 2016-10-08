@@ -28,8 +28,10 @@ export default class DetailView extends React.Component{
     render() {
         return (
           <View  style= {styles.container}>
-            <Nav  hiddenBack='1' title='综合练习'/>
+              <Nav />
+            <Nav  hiddenBack={true} title='综合练习'/>
 
+              
 
             <View style={styles.blank}/>
             <TouchableOpacity  onPress={() => this.onClick(1)}>

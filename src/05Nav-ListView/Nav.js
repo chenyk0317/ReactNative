@@ -36,7 +36,7 @@ export default class Navigation extends Component {
     }
   }
   render() {
-    let btn = this.props.hiddenBack === '1' ?
+    let btn = this.props.hiddenBack === true ?
      <View />
     :(
       <TouchableOpacity onPress={this.onPressBack.bind(this)}>
